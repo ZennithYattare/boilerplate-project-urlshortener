@@ -49,7 +49,7 @@ app.post("/api/shorturl", async (req, res) => {
 
 	// Validate URL
 	if (!validUrl.isWebUri(url)) {
-		return res.status(400).json({ error: "invalid url" });
+		return res.status(200).json({ error: "invalid url" });
 	}
 
 	// Check if URL already exists in database
